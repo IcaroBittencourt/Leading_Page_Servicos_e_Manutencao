@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
+
+    <title>Política de Qualidade</title>
+    <style>
+        body {
+            font-family: 'Sora', sans-serif;
+            color: white;
+            background-color: #06121e;
+            display: flex;            
+            justify-content: center;   
+            align-items: center;       
+            height: 100vh;             
+            margin: 0;                 
+            padding: 20px;             
+        }
+
+        .pagina-politicas {
+            padding: 20px 8px;         
+            line-height: 150%;
+            text-align: center;
+            max-width: 780px;
+            animation: appear 2s ease-in-out;
+             
+            max-height: calc(100vh - 20px); 
+            overflow-y: auto; 
+            
+        }
+
+        .pagina-politicas h1{
+            margin-bottom: 3vw;
+            font-size: 2vw; 
+            line-height: 1.5;
+        }
+
+        .pagina-politicas p {
+            font-size: 22px;
+            letter-spacing: 0px;
+            word-spacing: 1px;
+            line-height: 1.9;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20%); 
+            }
+            to {
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+       
+        @media (max-width: 885px) {
+            .pagina-politicas {
+                max-width: 100%;      
+                padding: 20px 16px;   
+            }
+
+            .pagina-politicas p {
+                font-size: 18px;      
+                line-height: 1.6;    
+            }
+
+            .pagina-politicas h1 {
+                font-size: 6vw; 
+                margin-bottom: 3vw;      
+            }
+        }
+
+        @media (max-width: 450px) {
+            .pagina-politicas {
+                max-width: 100%;      
+                padding: 20px;       
+            }
+        
+            .pagina-politicas p {
+                font-size: 18px;     
+                line-height: 2;       
+            }
+        
+            .pagina-politicas h1 {
+                font-size: 8vw;      
+                margin-bottom: 3vw;
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="pagina-politicas">
+    <h1>Política de Qualidade</h1>
+    <p>
+        Buscar sempre a satisfação dos nossos clientes através das melhorias contínuas de nosso atendimento, 
+        atendendo sempre às expectativas dos serviços executados, visando rigorosamente a segurança, 
+        qualidade e o menor investimento possível.
+    </p>
+    </div>
+    
+</body>
+</html>

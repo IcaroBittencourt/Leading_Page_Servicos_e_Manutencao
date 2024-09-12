@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
+    <title>Missão, Visão e Valores</title>
+    <style>
+        
+        body {
+            font-family: 'Sora', sans-serif;
+            color: white;
+            background-color: #06121e;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            min-height: 100vh; 
+            margin: 0;
+            padding: 20px;
+        }
+
+        .pagina-politicas {
+            padding: 20px 8px;
+            line-height: 150%;
+            text-align: center;
+            max-width: 780px;
+            animation: appear 2s ease-in-out;
+            max-height: none; 
+            overflow-y: auto;
+        }
+
+        .pagina-politicas h1 {
+            margin-bottom: 3vw;
+            font-size: 2vw;
+            line-height: 1.5;
+        }
+
+        .pagina-politicas p {
+            font-size: 22px;
+            letter-spacing: 0px;
+            word-spacing: 1px;
+            line-height: 1.9;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+       
+        @media (max-width: 885px) {
+            .pagina-politicas {
+                max-width: 100%;
+                padding: 20px 16px;
+            }
+
+            .pagina-politicas p {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            .pagina-politicas h1 {
+                font-size: 6vw;
+                margin-bottom: 3vw;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .pagina-politicas {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .pagina-politicas p {
+                font-size: 18px;
+                line-height: 2;
+            }
+
+            .pagina-politicas h1 {
+                font-size: 8vw;
+                margin-bottom: 3vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pagina-politicas">
+        <h1>Missão</h1>
+        <p>
+            Oferecemos aos nossos clientes serviços de qualidade, baseados na responsabilidade
+            e no comprometimento ético dos profissionais e colaboradores envolvidos em todo o processo.
+            Nosso objetivo é sempre atender às necessidades dos clientes, garantindo sua satisfação
+        </p>
+
+        <h1>Visão</h1>
+        <p>
+            Trabalhar de forma eficaz, oferecendo sempre um serviço de altíssima qualidade e buscando
+            a excelência nos serviços prestados.
+        </p>
+
+        <h1>Valores</h1>
+        <p>
+            Comprometimento.<br>
+            Responsabilidade.<br>
+            Transparência.<br>
+            Valorização humana.<br>
+            Melhoria contínua dos nossos procedimentos.<br>
+        </p>
+    </div>
+</body>
+</html>

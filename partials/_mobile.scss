@@ -1,0 +1,409 @@
+//MOBILE
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    
+}
+
+.nav-links li a {
+    color: $white-normal;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; 
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(11px, -10px);
+}
+
+
+//Dropdown-btn
+.nav-links li {
+    position: relative; 
+}
+
+.dropdown-content {
+    display: none; 
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: $primary-light;
+    box-shadow: -20px 20px 16px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.dropdown-content.show {
+    display: block; 
+    max-height: 200px; 
+    opacity: 1; 
+}
+
+
+
+
+.dropdown-content li a {
+    color: $white-normal;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: $red-light;
+}
+
+ 
+@media (max-width: 1520px) {
+    .cards-services {
+        display: grid;
+        gap: 1rem; 
+        grid-template-columns: repeat(4, 1fr); 
+        
+    }
+
+    .hover-text{
+        font-size: 12px;
+    }
+
+    .about-content{
+
+        flex-direction: column-reverse;
+    }
+
+    section.slider {
+
+        width: 80%;
+    }
+    
+    
+}
+
+@media (max-width: 1051px) {
+    .cards-services {
+        display: grid;
+        gap: 1rem; 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .hover-text{
+        font-size: 12px;
+    }
+
+    .about-content{
+
+        flex-direction: column-reverse;
+    }
+
+    section.slider {
+
+        width: 97%;
+    }
+
+    .prev-btn-01,
+    .next-btn-01 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.1); 
+        border: none;
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.1s ease;
+    }
+
+    .prev-btn-01:hover,
+    .next-btn-01:hover {
+        background-color: rgba(0, 0, 0, 0.8); 
+    }
+
+
+    .prev-btn-01 {
+        left: 10px;
+        border-radius: 0 5px 5px 0; 
+    }
+
+
+    .next-btn-01 {
+        right: 10px;
+        border-radius: 5px 0 0 5px; 
+    }
+
+}
+
+
+
+@media (max-width: 898px){
+
+    .Politicas{
+        display: none;
+    }
+
+    .social-media{
+        display: none;
+    }
+}
+
+
+
+
+//ESCONDE-O-MENU-QUANDO-A-TELA-ESTA-A-CIMA-DE-885px-OU-QUANDO-ESTA-PARA-DESKTOP
+@media (min-width: 885px) {
+
+    .navbar{
+        display: none;
+    }
+
+    .nav-links li a{
+
+        display: none;
+    }
+
+    .header-icons-mobile{
+
+        display: none;
+    } 
+
+    .slides-wrapper{
+
+        display:  none;
+    }
+} 
+
+@media (min-width: 885px) {
+    .slide-cards {
+        display: none;
+    }
+}
+
+
+
+
+//Responsividade 
+@media (max-width: 885px) {
+    
+
+    .header-icons{
+
+        display: none;
+    }
+
+    .menu-bottons{
+
+        display: none;
+    }
+
+    .nav-links li{
+        margin-left: 0;
+        
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 1px; 
+        left: 0;
+        width: 60vw;
+        height: 85vh;
+        background: #0c2135;
+        flex-direction: column;
+        align-items: center;
+        z-index: 3; 
+        justify-content: space-around;
+        transform: translateX(-110%);
+        transition: transform 0.3s ease-in-out;
+        border-radius: 9px;
+    }
+    
+   
+    
+    
+    
+    .nav-links.active {
+        transform: translateX(-7%); 
+        
+    }
+    
+    #header-content {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .hamburger {
+
+        display: flex;
+        margin-top: -5%;
+        z-index: 4;
+    }
+                
+    .header-icons-mobile {
+        display: flex;
+        gap: 11vw;
+        padding: 40px 40px 0px;
+        justify-content: space-between;
+    }
+    
+    @keyframes translateY {
+        from {
+            transform: translateY(0) scale(1);
+        }
+        to {
+            transform: translateY(-8px) scale(1.1);
+        }
+    }
+    
+    i {
+        color: $white-normal;
+    }
+    
+    .header-icons-mobile a:hover i {
+        animation: translateY 0.8s infinite alternate;
+        color: $red-light;
+    }
+
+    .about-content{
+
+        flex-direction: column-reverse;
+    }
+
+    section.slider {
+
+        width: 97%;
+    }
+
+    .hero p{
+
+        font-size: 16px;
+    }
+
+    .about-description p{
+
+        font-size: 16px; 
+    }
+
+    
+    
+
+    .slide-cards {
+       
+        width: 85vw;
+    }
+    
+    .cards {
+       display: none;
+    }
+    
+    .cards-services {
+        align-items: center; 
+        width: 85vw;
+        flex-direction: column;
+        display: flex; 
+        flex-direction: column; 
+        grid-template-columns: none;
+    }
+
+
+
+
+    
+    .bg-home::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("/assets/imgs/fundo_teste-2.jpg"); 
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 101%;
+        z-index: -1;
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center center; 
+        opacity: 0.9;
+       
+       
+       
+    }
+    
+
+    .Politicas{
+        display: none;
+    }
+
+    .logo {
+        background-image: url("/assets/imgs/logo_cell.png");
+        max-width: 230px;
+        width: 30%;
+        height: auto;
+        padding: 0 20px; 
+        margin-right: -2vh;
+            
+    }
+
+    .social-media{
+        display: none;
+    }
+    
+    
+
+    .visitantes {
+        font-size: 13px;
+        font-weight: bold;
+        position: relative; 
+        margin-left: 7%;
+        margin-top: -5%;
+        z-index: 10; 
+    }
+    
+
+}
+
+
+
+
+
+
+
+
